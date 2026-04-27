@@ -1,0 +1,272 @@
+.nav {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: white;
+}
+
+body {
+    margin: auto;
+}
+
+.nav a {
+    padding: 20px;
+}
+
+.nav a:hover {
+    color: orange;
+}
+
+.nav-logo {
+    height: 100%;
+    width: auto;
+    margin-right: auto;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-img {
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+
+.title-name {
+    color: white;
+}
+
+.title-img {
+    width: 100%;
+    height: auto;
+}
+
+.center-label {
+    position: relative;
+}
+
+.intro-text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* transform: translateY(-50%); */
+    font-size: clamp(1.2rem, 3vw, 3rem);
+}
+
+.work-button {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* View my Work  */
+
+.hover-underline {
+    font-size: clamp(1.2rem, 3vw, 3rem);
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #fffefe, #000000);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+
+
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+/*     
+    min-height: auto;
+    width: 20%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3F8EAC;
+}
+
+.profile-intro {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.skills-section{
+    width: 100%;
+    text-align: center;
+}
+
+.sub-skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;        /* allows items to move to next row */
+    gap: 20px;              /* consistent spacing between cards */
+}
+
+.skill-title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    color: #3F8EAC;
+}
+
+/* .card{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-img{
+    width: 100% ;
+    max-width: 500px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3dvh;
+}
+
+.card-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+    float: left;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: #3F8EAC;
+}
+
+.footer-continer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.follow{
+    color: white;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+
+.app-img{
+    width: 30px;
+    height: auto;
+    margin-inline: 15px;
+    /* Use Codepen Filter Generator to convert #ffffff into SVG icone White */
+    filter: invert(100%) sepia(68%) saturate(1%) hue-rotate(90deg) brightness(114%) contrast(101%);
+}
+.lable-container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    font-size: 0.8rem;
+    margin: 10px;
+}
+
+.lable-container a{
+    padding: 10px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .sub-skills{
+        width: 100%;
+        text-align: justify;
+        /* background-color: black; */
+    }
+
+    .card{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* background-color: aqua; */
+    }
+
+    .card-img{
+        width: 100%;
+        display: inline;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+
+}
